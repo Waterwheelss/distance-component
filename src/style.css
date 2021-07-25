@@ -1,0 +1,144 @@
+html, body {
+	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
+	font-weight: 400;
+}
+
+h1 {
+	text-align: center;
+}
+
+.distance{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 1000px;
+  height: 55px;
+}
+
+.distance__dot{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.distance__dot.default{
+  transition-delay: 250ms !important;
+}
+
+.distance__dot.inactive{
+  opacity: 0 !important;
+}
+
+.distance__dot.active{
+  right: 0px !important;
+  transition-delay: 250ms;
+}
+
+.distance__dotIconContainer{
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.distance__dotIcon .dotIcon__innerCircle{
+  fill: #727272;
+  transition: fill 0.3s;
+}
+
+.distance__dot.active .distance__dotIcon .dotIcon__innerCircle, .distance__dotIcon:hover .dotIcon__innerCircle{
+  fill: #1C70F9;
+  transition: fill 0.3s;
+}
+
+.distance__line{
+  position: absolute;
+  z-index: 0;
+  border-bottom: 2px solid #000;
+  width: 95%;
+  margin-left: 3%;
+}
+
+.distance__showBox{
+  display: flex;
+  width: 80%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.distance__arrowButton {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  right: -50px;
+  top: 0;
+  cursor: pointer;
+}
+
+.showBox__textContainer{
+  height: 0px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 36px;
+  background-color: #1661B4;
+  color: #fff;
+  z-index: 3;
+}
+
+.showBox__placeholder{
+  visibility: hidden;
+}
+
+.showBox-enter .showBox__textContainer{
+  height: 0px;
+  transition: height 300ms;
+}
+
+.showBox-enter-active .showBox__textContainer{
+  height: 0px;
+  transition: height 300ms;
+}
+
+.showBox-enter-done .showBox__textContainer{
+  height: 36px;
+  transition: height 300ms;
+}
+
+.showBox-exit .showBox__textContainer{
+  height: 36px;
+  transition: height 300ms;
+}
+
+.showBox-exit-active .showBox__textContainer{
+  height: 0px;
+  transition: height 300ms;
+}
+
+.showBox-exit-done .showBox__textContainer{
+  height: 0px;
+}
+
+.distance__arrowButton .distance__arrow path{
+  transition: 0.2s;
+}
+
+.distance__arrowButton:hover .distance__arrow path{
+  fill: #1C70F9;
+  transition: 0.2s;
+}
