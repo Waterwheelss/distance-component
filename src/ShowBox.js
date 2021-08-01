@@ -2,9 +2,8 @@ const ShowBox = ({ text }) => {
   return (
     <div className="distance__showBox">
       <div className="showBox__textContainer">
-        {text}
+        <span className="showBox__text">{text}</span>
       </div>
-      <div className="showBox__placeholder">placeholder</div>
     </div>
   )
 }

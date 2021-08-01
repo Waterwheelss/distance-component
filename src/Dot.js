@@ -38,7 +38,7 @@ const Dot = ({ isMain, isLast, dotState = 'main', name, className = '', onClick,
           <DotIcon />
         }
       </span>
-      <span>{name}</span>
+      <span className="distance__dotText" dangerouslySetInnerHTML={{__html: name}} />
     </button>
   )
 }

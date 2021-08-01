@@ -1,7 +1,7 @@
 {
   "name": "distance-component",
   "short_name": "distance-component",
-  "start_url": "/",
+  "start_url": "https://waterwheelss.github.io/distance-component/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
